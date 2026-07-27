@@ -6,7 +6,7 @@ export default function Gallery({ limit }) {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/photos/')
+    axios.get('https://mk-prod.onrender.com/api/photos/')
       .then(res => {
         const data = limit ? res.data.slice(0, limit) : res.data;
         console.log(res.data);
